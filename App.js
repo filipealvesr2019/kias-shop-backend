@@ -20,7 +20,6 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(cors()); // Permite todos os domínios
 // app.use(cors({
 //   origin: [
    
@@ -31,6 +30,7 @@ app.use(cors()); // Permite todos os domínios
 //   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 //   credentials: true // Se você estiver usando cookies ou headers personalizados
 // }));
+app.use(cors()); // Permite todos os domínios
 
 
 require('dotenv').config();
