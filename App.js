@@ -20,18 +20,17 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(cors({
-  origin: [
-    'https://mediewal.com.br',
-    'https://admin.mediewal.com.br',
-    'http://localhost:5001',
-    'http://localhost:5007',
-    'https://loja.mediewal.com.br',
-    'http://localhost:5012'
-  ],
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true // Se você estiver usando cookies ou headers personalizados
-}));
+app.use(cors()); // Permite todos os domínios
+// app.use(cors({
+//   origin: [
+   
+//     'http://localhost:5018',
+//     'http://localhost:5015',
+//     'http://localhost:5012'
+//   ],
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true // Se você estiver usando cookies ou headers personalizados
+// }));
 
 
 require('dotenv').config();
