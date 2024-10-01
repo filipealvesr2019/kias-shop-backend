@@ -30,8 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 //   credentials: true // Se você estiver usando cookies ou headers personalizados
 // }));
-app.use(cors()); // Permite todos os domínios
-
+app.use(cors({ origin: "*"}));
 
 require('dotenv').config();
 
